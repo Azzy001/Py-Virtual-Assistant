@@ -1,2 +1,16 @@
+import wolframalpha
+import wikipedia
 
-print("This is a test")
+while True:
+    user = input("Question: ")
+
+    try:
+        # wolframalpha
+        api_id = "******-**********"
+        client = wolframalpha.Client(api_id)
+        result = client.query(user)
+        answer = next(result.results).text
+        print(answer)
+    except:
+        # wikipedia
+        print(wikipedia.summary(user))
