@@ -15,11 +15,16 @@ wikipedia
 
     pip install wikipedia
     
+Tkinter
+    
+    pip install tk
+    
+## Wolframalpha Api
+You will need to generate an API key from this website.
+
+https://www.wolframalpha.com/ -> register to their website and click on the API tab.
+    
 -----
-
-### Search people!
-
-![search1](https://github.com/Azzy001/Py-Virtual-Assistant/blob/master/Images/virtual_assistant_GUI.png)
 
 ### Get live weather information of your location!
 
