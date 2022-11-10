@@ -1,5 +1,3 @@
-from cProfile import label
-from unittest import result
 import wolframalpha
 import wikipedia
 from tkinter import *
@@ -8,16 +6,18 @@ root = Tk()
 
 
 def user_input():
-    """ """
+    """This function is used for querying through wiki and wolframalpha"""
     search = (input_ent.get())
     
     try:
         # wolframalpha
         api_id = "******-**********" # <-- you will need to enter the API key from wolframalpha
         client = wolframalpha.Client(api_id)
-        result = client.query(search)
+        # creating a client for the api_id
+        result = client.query(search) 
         answer = next(result.results).text
         print(answer)
+        # displaying results onto result_text widget
         result_text.insert(END, answer)
     
     except:
